@@ -22,7 +22,6 @@ if __name__ == "__main__":
     parser.add_argument('--un_rate', type=int, default=4)
     parser.add_argument('--dataset_name', type=str, default='BraTS')
     parser.add_argument('--dataset_path', type=str, default='./MICCAI_BraTS_2019_Data_Training')
-    parser.add_argument('--gamma', type=float, default=0.5)
     parser.add_argument('--recon_only', type=bool, default=False)
     parser.add_argument('--model_path', type=str, default='./saved_models/')
     parser.add_argument('--network', type=str, default='unet')
@@ -95,4 +94,6 @@ if __name__ == "__main__":
         recon_module = ModelModule(args.domain, recon_name, 'recon', args.un_rate, trans_module=trans_module, reg_module=reg_module, alpha=args.alpha, k_weight=args.k_weight)
         recon_module.train(dataloader_train, args.train_epoch)
         recon_module.test(dataloader_test, [args.train_epoch])
+
+    recon_module.test(dataloader_test, [args.train_epoch])
 
