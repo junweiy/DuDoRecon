@@ -30,3 +30,11 @@ Due to the sequential nature of our proposed framework, the evaluation is integr
 
 ## Citation
 If this implementation is helpful for your research, please consider citing our work:
+```
+@article{yang2023dual,
+  title={Dual-Domain Multi-Contrast MRI Reconstruction with Synthesis-based Fusion Network},
+  author={Yang, Junwei and Li{\`o}, Pietro},
+  journal={arXiv preprint arXiv:2312.00661},
+  year={2023}
+}
+```
